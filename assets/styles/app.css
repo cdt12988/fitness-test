@@ -1,0 +1,219 @@
+/*============================
+	
+       Global Stylings
+ 
+============================*/
+@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+
+html {
+	box-sizing: border-box;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+body {
+	background-image: linear-gradient(to left top, #ffb345, #faab3b, #f6a430, #f19c25, #ec9417);
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	min-width: 100vw;
+	min-height: 100vh;
+	
+	font-family: 'Roboto Condensed', sans-serif;
+	line-height: 1.6;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+
+header {
+	width: 100vw;
+	height: 10vh;
+	min-height: 75px;
+	
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+h1 {
+	color: #fefff7;
+	font-family: 'Fredoka One', cursive;
+	font-size: 3em;
+	text-shadow: 2px 2px 15px #94703d;
+}
+.profile-container {
+	width: 10%;
+	font-size: 1em;
+	color: #fefff7;
+	font-family: 'Fredoka One', cursive;
+	text-shadow: 2px 2px 15px #94703d;
+	position: absolute;
+	right: 2.5%;
+	top: 10%;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+}
+.profile-name {
+	font-size: 1.25em;
+}
+.profile-container div {
+	cursor: pointer;
+	width: 100%;
+	text-align: center;
+}
+.dropdown-wrapper {
+	visibility: hidden; /* hides sub-menu */
+	opacity: 0;
+//	position: absolute;
+//  top: 100%;
+//  left: 0;
+  width: 100%;
+  transform: translateY(-2em);
+  z-index: -1;
+  transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+}
+.profile-container:focus .dropdown-wrapper,
+.profile-container:focus-within .dropdown-wrapper,
+.profile-container:hover .dropdown-wrapper {
+  visibility: visible; /* shows sub-menu */
+  opacity: 1;
+  z-index: 1;
+  transform: translateY(0%);
+  transition-delay: 0s, 0s, 0.3s; /* this removes the transition delay so the menu will be visible while the other styles transition */
+}
+.dropdown div:hover {
+	color: #fee6bc;
+}
+/*
+.dropdown-wrapper {
+	max-height: 0;
+	overflow: hidden;
+}
+*/
+/*
+.profile-container:hover .dropdown-wrapper {
+	max-height: 650px;
+}
+*/
+
+/*============================
+	
+       Login Page
+ 
+============================*/
+
+.login-container,
+.signup-container {
+	width: 50vw;
+	min-height: 25vh;
+	margin: 5% auto;
+	padding: 1em;
+//	border: 5px solid #fee6bc;
+	border-radius: 1em;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	background-image: linear-gradient(to left top, #ffb345, #fcb349, #f9b24d, #f6b251, #f3b155);
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	color: #fefff7;
+}
+.login-container h2 {
+	font-size: 2.5em;
+	font-family: 'Fredoka One', cursive;
+	text-shadow: 1px 1px 10px #94703d;
+}
+.login-container input,
+.login-container select {
+	margin: 0.5em auto;
+	padding: 0.25em 1em;
+	width: 90%;
+	height: 2em;
+	border-radius: 1em;
+	font-size: 1.5em;
+	outline: none;
+	box-shadow: inset 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+//	box-shadow: inset 0 1px 2px rgba(0,0,0,.39), 0 -1px 1px #FFF, 0 1px 0 #000;
+}
+.login-container label {
+	font-size: 2em;
+}
+.login-container p {
+	font-size: 1.5em;
+	margin-top: 0.25em;
+}
+#gender {
+	margin-bottom: 1em;
+}
+.btn {
+	font-family: 'Fredoka One', cursive;
+	font-size: 1.5em;
+	padding: 0.25em 0.75em;
+	border-radius: 1em;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	color: #fefff7;
+	background: #ffb345;
+	cursor: pointer;
+	text-align: center;
+	max-width: 400px;
+	text-shadow: 1px 1px 10px #c08e49;
+}
+.btn:hover {
+	background: #ffcc81;
+}
+.btn:active {
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
+.login-container a {
+	font-family: 'Fredoka One', cursive;
+	font-size: 1em;
+	text-shadow: 1px 1px 10px #c08e49;
+}
+.login-container a:hover {
+	border-bottom: 3px solid #fefff7;
+//	color: #fee6bc;
+}
+
+
+
+.main-container {
+	width: 100%;
+	margin: 5% auto;
+	
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#daily-calories {
+	font-size: 4em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.js-hidden {
+	display: none;
+}
